@@ -34,6 +34,7 @@
 }
 
 #header-comp img {
+    /** make logo-image full height of header **/
     margin: -10px 0px -10px 0px;
 }
 
@@ -132,11 +133,29 @@ main {
     padding: 10px;
 }
 
+@media screen and (max-width: 1220px) {
+
+    /** go from fixed with for content to full width of the screen **/
+    #header-comp {
+        grid-template-columns: 1fr 100% 1fr;
+    }
+
+    #mainContentGrid {
+        grid-template-columns: 1fr 100% 1fr;
+    }
+}
+
+@media screen and (max-width: 550) {
+    /** TODO hamburger menu **/
+}
+
 #mainContent {
     grid-area: 1 / 2;
 }
 
+/** TODO: navigation to hamburger-menu if content width is smaller than size 550px **/
 /** TODO: general classes override #header-comp classes => separate .css file for header and footer? **/
 /** TODO: replace logo src with locally hosted hi-res image**/
+/** TODO: Grid already on body-level, to get rid of redundancie in main and header for fixed contentWidth **/
 
 /****************************************/
