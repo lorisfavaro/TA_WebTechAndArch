@@ -7,13 +7,18 @@ class Header extends HTMLElement {
     this.innerHTML = `
           <link rel="stylesheet" href="../css/styles.css">
           <header id="header-comp">
-            <nav>
-              <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
+            <div class="wrapper">
+              <a href="index.html"><img src="https://primary.jwwb.nl/public/g/u/b/temp-fmzqnwlqvdvgqypqtyli/lxg8xa/1000016810.png?enable-io=true&enable=upscale&width=88"></img></a>
+              <nav>
+                <ul>
+                  <li><a href="episodes.html">Alle Folgen</a></li>
+                  <li class="linkSeparator">|</li>
+                  <li><a href="about.html">Über mich</a></li>
+                  <li class="linkSeparator">|</li>
+                  <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+              </nav>
+            </div>
           </header>
         `;
   }

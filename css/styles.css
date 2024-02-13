@@ -1,33 +1,66 @@
 /** Imports **/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
+
+/****************************************/
+
+/** constants **/
+:root {
+    --contentWidth: 1200px;
+}
+
 /****************************************/
 
 /** header-comp **/
 #header-comp nav {
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0a0a23;
+    background-color: #fff;
+    padding-right: 10px;
+}
+
+#header-comp {
+    display: grid;
+    grid-template-columns: 1fr var(--contentWidth) 1fr;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#header-comp .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: 1 / 2;
+}
+
+#header-comp img {
+    margin: -10px 0px -10px 0px;
 }
 
 #header-comp ul {
     padding: 0;
+    margin: 0;
+    list-style-type: none;
     display: flex;
     flex-direction: row;
-    list-style-type: none;
+    justify-content: center;
+    gap: 35px;
+    font-size: 18px;
 }
 
 #header-comp a {
-    font-weight: 700;
-    margin: 0 25px;
-    color: #fff;
+    color: #4caac9;
     text-decoration: none;
 }
 
-#header-comp a:hover {
+#header-comp li>a:hover {
     padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 #fff;
+    box-shadow: inset 0 -2px 0 0 #4caac9;
+}
+
+#header-comp .linkSeparator {
+    color: #aaaaaa;
+    margin: 0;
 }
 
 /****************************************/
@@ -68,7 +101,7 @@
 
 #footer-comp a:hover {
     padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 #aaaaaa;
+    box-shadow: inset 0 -2px 0 0 #4caac9;
 }
 
 #footer-comp p,
@@ -89,9 +122,21 @@ body {
 }
 
 main {
-    background-color: rgb(226, 226, 226);
-    padding: 15px;
+    background-color: #fff;
     flex: 1;
 }
+
+#mainContentGrid {
+    display: grid;
+    grid-template-columns: 1fr var(--contentWidth) 1fr;
+    padding: 10px;
+}
+
+#mainContent {
+    grid-area: 1 / 2;
+}
+
+/** TODO: general classes override #header-comp classes => separate .css file for header and footer? **/
+/** TODO: replace logo src with locally hosted hi-res image**/
 
 /****************************************/
