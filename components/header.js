@@ -5,7 +5,6 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-          <link rel="stylesheet" href="../css/styles.css">
           <header id="header-comp">
             <div class="wrapper">
               <a href="index.html"><img src="https://primary.jwwb.nl/public/g/u/b/temp-fmzqnwlqvdvgqypqtyli/lxg8xa/1000016810.png?enable-io=true&enable=upscale&width=88"></img></a>
