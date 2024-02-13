@@ -7,13 +7,18 @@ class Footer extends HTMLElement {
     this.innerHTML = `
           <link rel="stylesheet" href="../css/styles.css">
           <footer id="footer-comp">
-            <nav>
+            <nav class="footerRow">
               <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="episodes.html">Alle Folgen</a></li>
+                <li class="linkSeparator">|</li>
+                <li><a href="about.html">Über mich</a></li>
+                <li class="linkSeparator">|</li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="linkSeparator">|</li>
+                <li><a href="imprint.html">Impressum</a></li>
               </ul>
             </nav>
+            <p class="footerRow">&copy; 2024 four wheels. Alle Rechte vorbehalten.</P>
           </footer>
         `;
   }

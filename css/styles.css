@@ -33,31 +33,48 @@
 /****************************************/
 
 /** footer-comp **/
-#footer-comp nav {
-    height: 80px;
+#footer-comp .footerRow {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0a0a23;
+}
+
+#footer-comp {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f6f6;
+    gap: 20%;
+    padding: 10px;
 }
 
 #footer-comp ul {
     padding: 0;
+    margin: 0;
+    list-style-type: none;
     display: flex;
     flex-direction: row;
-    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
 #footer-comp a {
-    font-weight: 700;
-    margin: 0 25px;
-    color: #c70c0c;
+    color: #4caac9;
     text-decoration: none;
 }
 
 #footer-comp a:hover {
     padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 #fff;
+    box-shadow: inset 0 -2px 0 0 #aaaaaa;
+}
+
+#footer-comp p,
+.linkSeparator {
+    color: #aaaaaa;
+    margin: 0;
 }
 
 /****************************************/
