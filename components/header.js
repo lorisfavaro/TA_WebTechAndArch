@@ -16,11 +16,11 @@ class Header extends HTMLElement {
                   <li class="linkSeparator">|</li>
                   <li class="nav-item"><a href="contact.html">Kontakt</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger">
                   <span class="bar"></span>
                   <span class="bar"></span>
                   <span class="bar"></span>
-                </div>
+                </button>
               </nav>
             </div>
           </header>
