@@ -127,6 +127,15 @@
 
 /****************************************/
 
+/** socials-comp **/
+#socials-comp {
+    background-color: #4caac9;
+    height: 100px;
+    border-radius: 5px;
+}
+
+/****************************************/
+
 /** general **/
 body {
     font-family: 'Roboto flex', sans-serif;
