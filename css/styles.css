@@ -64,6 +64,20 @@
     margin: 0;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
 /****************************************/
 
 /** footer-comp **/
@@ -133,6 +147,13 @@ main {
     padding: 10px;
 }
 
+#mainContent {
+    grid-area: 1 / 2;
+}
+
+/****************************************/
+
+/** media queries **/
 @media screen and (max-width: 1220px) {
 
     /** go from fixed with for content to full width of the screen **/
@@ -145,17 +166,56 @@ main {
     }
 }
 
-@media screen and (max-width: 550) {
-    /** TODO hamburger menu **/
+@media screen and (max-width: 550px) {
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 5rem;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 25px 27px -15px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    #header-comp .linkSeparator {
+        display: none;
+    }
+
+    #header-comp ul {
+        flex-direction: column;
+        padding: 15px 0 15px 0;
+        gap: 30px;
+        font-size: 25px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
-#mainContent {
-    grid-area: 1 / 2;
-}
+/****************************************/
 
 /** TODO: navigation to hamburger-menu if content width is smaller than size 550px **/
 /** TODO: general classes override #header-comp classes => separate .css file for header and footer? **/
 /** TODO: replace logo src with locally hosted hi-res image**/
 /** TODO: Grid already on body-level, to get rid of redundancie in main and header for fixed contentWidth **/
-
-/****************************************/
+/** TODO: Media query for footer links when width smaller than 480px(?) **/
