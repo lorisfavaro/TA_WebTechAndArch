@@ -15,8 +15,28 @@
     <header-comp></header-comp>
     <main id="mainContentGrid">
         <div id="mainContent">
-            <h1>Kontakt</h1>
-            <socials-comp></socials-comp>
+            <section>
+                <h1>Kontaktiere mich</h1>
+                <div class="contactFormWrapper">
+                    <p>
+                        Mit betankten Autos und eingeschalteten Mikros warten wir nur noch auf deine Nachricht, um den
+                        Motor unseres Dialogs zu starten – sei es Feedback, Fragen oder geschäftliche Anfragen, lass uns
+                        die Fahrt gemeinsam antreten!
+                    </p>
+                    <form class="contactForm" action="submit">
+                        <label for="name">Dein Name</label>
+                        <input type="text" required>
+                        <label for="email">E-Mail</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="message">Deine Nachricht</label>
+                        <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+                        <button>Senden</button>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <socials-comp></socials-comp>
+            </section>
         </div>
     </main>
     <footer-comp></footer-comp>

@@ -140,6 +140,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 0 15px 0;
     padding: 15px;
     gap: 15px;
 }
@@ -207,6 +208,75 @@ main {
     grid-area: 1 / 2;
 }
 
+h1 {
+    color: #4caac9;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+p {
+    color: #606060;
+    margin: 0;
+}
+
+.aboutWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutImg {
+    height: 250px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px;
+    color: #606060;
+    font-weight: bold;
+    width: 50%;
+}
+
+.contactForm input,
+textarea {
+    /* Remove gap between label and associated input/textarea */
+    margin-top: -10px;
+}
+
+.contactForm input:focus,
+textarea:focus {
+    border-color: #4caac9;
+    outline: none;
+}
+
+.contactForm input,
+button,
+textarea {
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.contactForm button {
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+    background-color: #606060;
+    color: #fff;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+
+.contactForm button:hover {
+    background-color: #4caac9;
+    cursor: pointer;
+}
+
 /****************************************/
 
 /** media queries **/
@@ -223,11 +293,42 @@ main {
     }
 }
 
+/* about */
+@media screen and (max-width: 610px) {
+    .aboutImg {
+        margin: 0 10vw 0 10vw;
+        width: auto;
+        height: auto;
+    }
+
+    .aboutWrapper {
+        flex-direction: column;
+    }
+}
+
+/* about */
+@media screen and (max-width: 400px) {
+    .aboutImg {
+        margin: 0;
+    }
+}
+
+/* contact form */
+@media screen and (max-width: 800px) {
+    .contactForm {
+        width: 100%;
+    }
+}
+
 /* socials */
 @media screen and (max-width: 400px) {
     #socials-comp .socialsRow {
         flex-direction: column;
         gap: 25px;
+    }
+
+    .aboutImg {
+        margin: 0;
     }
 }
 
@@ -282,4 +383,5 @@ main {
 
 /** TODO: general classes override #header-comp classes => separate .css file for header and footer? **/
 /** TODO: replace logo src with locally hosted hi-res image**/
+/** TODO: replace contact image src with locally hosted hi-res image**/
 /** TODO: Grid already on body-level, to get rid of redundancie in main and header for fixed contentWidth **/
