@@ -23,9 +23,15 @@
                         Motor unseres Dialogs zu starten – sei es Feedback, Fragen oder geschäftliche Anfragen, lass uns
                         die Fahrt gemeinsam antreten!
                     </p>
-                    <form class="contactForm" action="submit">
+                    <form class="contactForm gform"
+                        action="https://script.google.com/macros/s/AKfycbwfl-Tl3JxHw4Q5rnShp216rp3RXXPwYFMB5D0-5cqzMmjRtLlL3A1TL8vhziYE0MMr/exec"
+                        method="POST">
+                        <div style="display:none" class="thankyou_message">
+                            <h2><em>Danke</em> für deine Nachricht! Ich werde mich bald bei dir melden!
+                            </h2>
+                        </div>
                         <label for="name">Dein Name</label>
-                        <input type="text" required>
+                        <input type="text" name="name" required>
                         <label for="email">E-Mail</label>
                         <input type="email" name="email" id="email" required>
                         <label for="message">Deine Nachricht</label>
@@ -41,6 +47,7 @@
     </main>
     <footer-comp></footer-comp>
     <script src="../js/functions.js" type="text/javascript"></script>
+    <script data-cfasync="false" type="text/javascript" src="../js/form-submision-handler.js"></script>
 </body>
 
 </html>
