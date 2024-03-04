@@ -243,6 +243,68 @@ p {
     width: 50%;
 }
 
+.ImgLandingBackdrop {
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+.catchPhrase {
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+
+.catchPhraseSub {
+    color: white;
+    font-size: x-large;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.sectionAboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.sectionTopics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 200px;
+}
+
+.articleTopic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.ImgTopic {
+    width: 65px;
+    border-radius: 5px;
+    background-color: lightgray;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.sectionAboutMe,
+.sectionTopics {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .contactForm input,
 textarea {
     /* Remove gap between label and associated input/textarea */
@@ -290,6 +352,15 @@ textarea {
 
     #mainContentGrid {
         grid-template-columns: 1fr 100% 1fr;
+    }
+}
+
+/* landingpage */
+@media screen and (max-width: 1220px) {
+
+    .sectionTopics {
+        flex-direction: column;
+        gap: 60px;
     }
 }
 
