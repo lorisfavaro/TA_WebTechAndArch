@@ -210,6 +210,7 @@ main {
 
 h1 {
     color: #4caac9;
+    margin-top: 0;
 }
 
 a {
@@ -243,26 +244,10 @@ p {
     width: 50%;
 }
 
-.ImgLandingBackdrop {
+.ImgLandingpageFiller {
     width: 100%;
     border-radius: 5px;
     opacity: 0.8;
-}
-
-.catchPhrase {
-    color: white;
-    font-size: xx-large;
-    position: absolute;
-    top: 15%;
-    left: 20%;
-}
-
-.catchPhraseSub {
-    color: white;
-    font-size: x-large;
-    position: absolute;
-    top: 20%;
-    left: 20%;
 }
 
 .sectionAboutMe {
@@ -270,16 +255,22 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 150px;
-    padding-right: 50px;
+    gap: 5vw;
+    padding: 0 0 50px 0;
+}
+
+.smallerSection {
     padding-left: 50px;
+    padding-right: 50px;
 }
 
 .sectionTopics {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 200px;
+    gap: 10vw;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .articleTopic {
@@ -297,12 +288,6 @@ p {
     background-color: lightgray;
     border-radius: 15px;
     padding: 15px;
-}
-
-.sectionAboutMe,
-.sectionTopics {
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .contactForm input,
@@ -356,11 +341,20 @@ textarea {
 }
 
 /* landingpage */
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 600px) {
 
     .sectionTopics {
         flex-direction: column;
         gap: 60px;
+    }
+
+    .smallerSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ImgLandingpageFiller {
+        display: none;
     }
 }
 
@@ -375,6 +369,11 @@ textarea {
     .aboutWrapper {
         flex-direction: column;
     }
+
+    .smallerSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* about */
@@ -382,12 +381,22 @@ textarea {
     .aboutImg {
         margin: 0;
     }
+
+    .smallerSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* contact form */
 @media screen and (max-width: 800px) {
     .contactForm {
         width: 100%;
+    }
+
+    .smallerSection {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
