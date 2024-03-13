@@ -36,6 +36,8 @@
 #header-comp img {
     /* make logo-image full height of header */
     margin: -10px 0px -10px 0px;
+    width: 88px;
+    height: 88px;
 }
 
 #header-comp ul {
