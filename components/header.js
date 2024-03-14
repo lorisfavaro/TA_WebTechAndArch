@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
           <header id="header-comp">
             <div class="wrapper">
-              <a id="headerLogo" href="index.html"><img src="../images/logo.webp"></img></a>
+              <a id="headerLogo" href="./"><img src="../images/logo.webp" alt="four wheels Logo"></img></a>
               <nav>
                 <ul class="nav-menu">
                   <li class="nav-item"><a id="headerAllEpisodes" href="episodes.html">Alle Folgen</a></li>
