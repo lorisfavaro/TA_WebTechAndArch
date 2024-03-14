@@ -6,9 +6,9 @@
 /** constants **/
 :root {
     --contentWidth: 1200px;
-    --primaryColor: #4caac9;
-    --secondaryColor: #606060;
-    --tertiaryColor: #fff;
+    --color-primary: #4caac9;
+    --color-secondary: #22282e;
+    --color-tertiary: #fff;
 }
 
 /****************************************/
@@ -18,14 +18,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--tertiaryColor);
+    background-color: var(--color-tertiary);
     padding-right: 10px;
 }
 
 #header-comp {
     display: grid;
     grid-template-columns: 1fr var(--contentWidth) 1fr;
-    background-color: var(--tertiaryColor);
+    background-color: var(--color-tertiary);
     padding: 10px;
 }
 
@@ -55,17 +55,17 @@
 }
 
 #header-comp a {
-    color: var(--primaryColor);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 #header-comp li>a:hover {
     padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 var(--primaryColor);
+    box-shadow: inset 0 -2px 0 0 var(--color-primary);
 }
 
 #header-comp .linkSeparator {
-    color: var(--secondayColor);
+    color: var(--color-secondary);
     margin: 0;
 }
 
@@ -119,18 +119,18 @@
 }
 
 #footer-comp a {
-    color: var(--primaryColor);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 #footer-comp a:hover {
     padding-bottom: 5px;
-    box-shadow: inset 0 -2px 0 0 var(--primaryColor);
+    box-shadow: inset 0 -2px 0 0 var(--color-primary);
 }
 
 #footer-comp p,
 .linkSeparator {
-    color: var(--secondayColor);
+    color: var(--color-secondary);
     margin: 0;
 }
 
@@ -138,7 +138,7 @@
 
 /** socials-comp **/
 #socials-comp {
-    background-color: var(--primaryColor);
+    background-color: var(--color-primary);
     height: auto;
     border-radius: 5px;
     display: flex;
@@ -174,7 +174,7 @@
 #socials-comp a,
 h2,
 h3 {
-    color: #444;
+    color: var(--color-secondary);
     text-decoration: none;
     margin: 0;
 }
@@ -199,7 +199,7 @@ body {
 }
 
 main {
-    background-color: var(--tertiaryColor);
+    background-color: var(--color-tertiary);
     flex: 1;
 }
 
@@ -214,17 +214,17 @@ main {
 }
 
 h1 {
-    color: var(--primaryColor);
+    color: var(--color-primary);
     margin-top: 0;
 }
 
 a {
-    color: var(--secondayColor);
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
 p {
-    color: var(--secondayColor);
+    color: var(--color-secondary);
     margin: 0;
 }
 
@@ -244,7 +244,7 @@ p {
     flex-direction: column;
     margin-top: 15px;
     gap: 10px;
-    color: var(--secondayColor);
+    color: var(--color-secondary);
     font-weight: bold;
     width: 50%;
 }
@@ -304,7 +304,7 @@ textarea {
 
 .contactForm input:focus,
 textarea:focus {
-    border-color: var(--primaryColor);
+    border-color: var(--color-primary);
     outline: none;
 }
 
@@ -319,14 +319,14 @@ textarea {
     width: 100px;
     height: 40px;
     font-size: larger;
-    background-color: var(--secondayColor);
-    color: var(--tertiaryColor);
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
     border-style: none;
     transition-duration: 0.4s;
 }
 
 .contactForm button:hover {
-    background-color: var(--primaryColor);
+    background-color: var(--color-primary);
     cursor: pointer;
 }
 
@@ -424,7 +424,7 @@ textarea {
         position: fixed;
         left: 100%;
         top: 5rem;
-        background-color: var(--tertiaryColor);
+        background-color: var(--color-tertiary);
         width: 100%;
         border-radius: 10px;
         text-align: center;
