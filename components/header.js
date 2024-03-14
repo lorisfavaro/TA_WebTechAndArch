@@ -7,14 +7,14 @@ class Header extends HTMLElement {
     this.innerHTML = `
           <header id="header-comp">
             <div class="wrapper">
-              <a href="index.html"><img src="../images/logo.webp"></img></a>
+              <a id="headerLogo" href="index.html"><img src="../images/logo.webp"></img></a>
               <nav>
                 <ul class="nav-menu">
-                  <li class="nav-item"><a href="episodes.html">Alle Folgen</a></li>
+                  <li class="nav-item"><a id="headerAllEpisodes" href="episodes.html">Alle Folgen</a></li>
                   <li class="linkSeparator">|</li>
-                  <li class="nav-item"><a href="about.html">Über mich</a></li>
+                  <li class="nav-item"><a id="headerAboutMe" href="about.html">Über mich</a></li>
                   <li class="linkSeparator">|</li>
-                  <li class="nav-item"><a href="contact.html">Kontakt</a></li>
+                  <li class="nav-item"><a id="headerContact" href="contact.html">Kontakt</a></li>
                 </ul>
                 <button class="hamburger">
                   <span class="bar"></span>
