@@ -24,7 +24,6 @@ if (onIndex) {
     let anchor = document.getElementById('headerLogo');
     let currentHref = anchor.getAttribute('href');
     let newHref = "../" + currentHref;
-    console.log(newHref);
     anchor.setAttribute('href', newHref);
 }
 
@@ -34,5 +33,4 @@ function prependLinks(elementId) {
     let currentHref = anchor.getAttribute('href');
     let newHref = "html/" + currentHref;
     anchor.setAttribute('href', newHref);
-    console.log(newHref)
 }
