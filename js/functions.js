@@ -18,6 +18,7 @@ function mobileMenu() {
  */
 var path = window.location.pathname;
 var page = path.split("/").pop();
+console.log(page);
 if (page == "index.html") {
     let pages = ["headerAllEpisodes", "headerAboutMe", "headerContact", "footerAllEpisodes", "footerAboutMe", "footerContact", "footerImprint"];
     pages.forEach((element) => prependLinks(element));
@@ -28,7 +29,6 @@ if (page == "index.html") {
     let newHref = "../" + currentHref;
     console.log(newHref);
     anchor.setAttribute('href', newHref);
-    console.log(newHref)
 }
 
 // Prepends "html/" to a link 
