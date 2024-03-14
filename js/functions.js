@@ -16,10 +16,7 @@ function mobileMenu() {
  * in the subpages the link to index.html has to go up one dir.
  * on index.html the links to all subpages need html/ in front to go into this dir.
  */
-var path = window.location.pathname;
-var page = path.split("/").pop();
-console.log(page);
-if (page == "index.html") {
+if (onIndex) {
     let pages = ["headerAllEpisodes", "headerAboutMe", "headerContact", "footerAllEpisodes", "footerAboutMe", "footerContact", "footerImprint"];
     pages.forEach((element) => prependLinks(element));
 } else {
