@@ -16,7 +16,7 @@ class Header extends HTMLElement {
                   <li class="linkSeparator">|</li>
                   <li class="nav-item"><a id="headerContact" href="contact.html">Kontakt</a></li>
                 </ul>
-                <button class="hamburger">
+                <button class="hamburger" aria-label="Navigation">
                   <span class="bar"></span>
                   <span class="bar"></span>
                   <span class="bar"></span>
