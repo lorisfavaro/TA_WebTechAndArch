@@ -8,7 +8,8 @@
     --contentWidth: 1200px;
     --color-primary: #4caac9;
     --color-secondary: #22282e;
-    --color-tertiary: #fff;
+    --color-tertiary: #eaf9fe;
+    --color-background: #fff;
 }
 
 /****************************************/
@@ -18,14 +19,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-background);
     padding-right: 10px;
 }
 
 #header-comp {
     display: grid;
     grid-template-columns: 1fr var(--contentWidth) 1fr;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-background);
     padding: 10px;
 }
 
@@ -199,7 +200,7 @@ body {
 }
 
 main {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-background);
     flex: 1;
 }
 
@@ -287,7 +288,7 @@ p {
     text-align: center;
 }
 
-.ImgTopic {
+.imgTopic {
     width: 65px;
     height: 65px;
     border-radius: 5px;
@@ -320,7 +321,7 @@ textarea {
     height: 40px;
     font-size: larger;
     background-color: var(--color-secondary);
-    color: var(--color-tertiary);
+    color: var(--color-background);
     border-style: none;
     transition-duration: 0.4s;
 }
@@ -328,6 +329,86 @@ textarea {
 .contactForm button:hover {
     background-color: var(--color-primary);
     cursor: pointer;
+}
+
+.gridEpisodes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+}
+
+.cardEpisode {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-tertiary);
+    ;
+    border-radius: 5px;
+    padding: 5px;
+    gap: 5px;
+    width: 348px;
+    height: 430px;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dddddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.cardContent {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5px;
+}
+
+.cardContentImg {
+    /* TODO fix height to scale, relativ to the given width */
+    width: 100%;
+    height: 100%;
+}
+
+.cardContentDesc {}
+
+.cardContentInfo {}
+
+.infoLeft {
+    text-align: left;
+}
+
+.infoRight {
+    text-align: right;
+    /* TODO ignoring padding from cardEpisode */
+}
+
+.cardSeparator {
+    /* get back to the full width of the card by negating the padding of cardEpisode */
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.cardLinks {
+    /* TODO stick to bottom of the card, along with hr and cardContentInfo (take them out of grid) */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cardLinksEpisode svg {
+    height: 65px;
+    width: 65px;
+}
+
+.cardLinksShare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardLinksShare svg {
+    height: 45px;
+    width: 45px;
 }
 
 /****************************************/
@@ -424,7 +505,7 @@ textarea {
         position: fixed;
         left: 100%;
         top: 5rem;
-        background-color: var(--color-tertiary);
+        background-color: var(--color-background);
         width: 100%;
         border-radius: 10px;
         text-align: center;
