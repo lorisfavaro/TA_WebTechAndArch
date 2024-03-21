@@ -340,8 +340,7 @@ textarea {
 .cardEpisode {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-tertiary);
-    ;
+    background: linear-gradient(0deg, var(--color-tertiary) 0%, var(--color-primary) 100%);
     border-radius: 5px;
     padding: 5px;
     gap: 5px;
@@ -353,7 +352,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #dddddd;
     border-radius: 4px;
     padding: 5px;
 }
@@ -365,22 +363,23 @@ textarea {
 }
 
 .cardContentImg {
-    /* TODO fix height to scale, relativ to the given width */
-    width: 100%;
-    height: 100%;
+    display: block;
+    max-width: 139px;
+    max-height: 179px;
+    width: auto;
+    height: auto;
 }
 
-.cardContentDesc {}
-
-.cardContentInfo {}
-
-.infoLeft {
-    text-align: left;
+.cardContentDesc {
+    /* always keeping the padding to the edge of card at min 5px, on matter the width of the text */
+    padding-right: 5px;
 }
 
-.infoRight {
-    text-align: right;
-    /* TODO ignoring padding from cardEpisode */
+.cardContentInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex: 1;
 }
 
 .cardSeparator {
@@ -390,7 +389,6 @@ textarea {
 }
 
 .cardLinks {
-    /* TODO stick to bottom of the card, along with hr and cardContentInfo (take them out of grid) */
     display: flex;
     justify-content: space-evenly;
 }
