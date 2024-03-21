@@ -34,3 +34,33 @@ function prependLinks(elementId) {
     let newHref = "html/" + currentHref;
     anchor.setAttribute('href', newHref);
 }
+
+/**
+ * shortens the description of the episode cards, if the text is to long for the card to be fully displayed
+ * @param {*} selector id of the element
+ * @param {*} maxHeight max height which gets displayed
+ */
+function truncateText(selector, maxHeight) {
+    const element = document.querySelector(selector);
+    let text = element.innerText;
+
+    while (element.scrollHeight > maxHeight) {
+        text = text.substr(0, text.length - 1);
+        element.innerText = text + "...";
+    }
+}
+
+truncateText(".cardContentDesc", 130);
+
+/**
+ * when the user clicks on div, open the popup
+ * @param {*} url the text that gets copied to clipboard
+ * @param {*} id id of the popup-span
+ */
+function togglePopup(url, id) {
+    var popup = document.getElementById(id);
+    // copy the url to the clipboard
+    navigator.clipboard.writeText(url);
+    // show the popup
+    popup.classList.toggle("show");
+}

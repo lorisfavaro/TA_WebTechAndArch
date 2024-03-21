@@ -332,9 +332,9 @@ textarea {
 }
 
 .gridEpisodes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
 }
 
 .cardEpisode {
@@ -345,41 +345,42 @@ textarea {
     padding: 5px;
     gap: 5px;
     width: 348px;
-    height: 430px;
+    height: 385px;
 }
 
 .cardTitle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     border-radius: 4px;
     padding: 5px;
 }
 
-.cardContent {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 5px;
-}
-
 .cardContentImg {
+    border-radius: 4px;
+    /* fix size of image, so aspect ration is always right */
     display: block;
     max-width: 139px;
     max-height: 179px;
     width: auto;
     height: auto;
+    /* make desc flow around the image */
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 .cardContentDesc {
     /* always keeping the padding to the edge of card at min 5px, on matter the width of the text */
     padding-right: 5px;
+    text-align: justify;
 }
 
 .cardContentInfo {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
     flex: 1;
+    align-items: end;
+    justify-content: space-between;
 }
 
 .cardSeparator {
@@ -398,6 +399,38 @@ textarea {
     width: 65px;
 }
 
+.cardLinkSharePopup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cardLinkSharePopup .cardLinkSharePopuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* toggle this class to hide and show the popup */
+.cardLinkSharePopup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s ease-in-out 0s 1 forwards, fadeOut 1s ease-in-out 3s 1 forwards;
+}
+
 .cardLinksShare {
     display: flex;
     align-items: center;
@@ -409,13 +442,55 @@ textarea {
     width: 45px;
 }
 
+/* add animation to the popup (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 /****************************************/
 
 /** media queries **/
 
-/* go from fixed with for content to full width of the screen */
+
 @media screen and (max-width: 1220px) {
 
+    /* go from fixed with for content to full width of the screen */
     #header-comp {
         grid-template-columns: 1fr 100% 1fr;
     }
@@ -423,7 +498,18 @@ textarea {
     #mainContentGrid {
         grid-template-columns: 1fr 100% 1fr;
     }
+
+    /* all episodes */
+    .gridEpisodes {
+        justify-content: space-evenly;
+    }
+
+    .cardContent {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
 }
+
 
 /* landingpage */
 @media screen and (max-width: 600px) {
@@ -543,10 +629,3 @@ textarea {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
-/****************************************/
-
-/** TODO: general classes override #header-comp classes => separate .css file for header and footer? **/
-/** TODO: replace logo src with locally hosted hi-res image**/
-/** TODO: replace contact image src with locally hosted hi-res image**/
-/** TODO: Grid already on body-level, to get rid of redundancie in main and header for fixed contentWidth **/
